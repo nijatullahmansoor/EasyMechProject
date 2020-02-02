@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Mobile_OTP">
+
+
+    <TextView
+        android:id="@+id/Show_Message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:text="6 digit OTP id sent to your phone: "
+        android:textColor="#F50D0D"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/OTP_Con"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="34dp"
+        android:ems="10"
+        android:hint="Enter OTP"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/Show_Message"
+        app:layout_constraintTop_toBottomOf="@+id/Show_Message" />
+
+    <Button
+        android:id="@+id/confirm_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="Confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <Button
+        android:id="@+id/resends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Resend"
+        app:layout_constraintStart_toStartOf="@+id/confirm_1"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_1" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="34dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/confirm_1"
+        app:layout_constraintTop_toBottomOf="@+id/OTP_Con" />
+</androidx.constraintlayout.widget.ConstraintLayout>

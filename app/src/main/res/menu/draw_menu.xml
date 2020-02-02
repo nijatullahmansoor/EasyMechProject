@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/about_us"
+            android:icon="@drawable/ic_supervisor"
+            android:title="Abdout Us">
+
+        </item>
+        <item
+            android:id="@+id/helping"
+            android:icon="@drawable/ic_help"
+            android:title="Help"
+            >
+
+        </item>
+        <item
+            android:id="@+id/F_A_Q"
+            android:icon="@drawable/ic_question"
+            android:title="FAQ">
+
+        </item>
+        <item
+            android:id="@+id/share_link"
+            android:icon="@drawable/ic_share"
+            android:title="Share">
+
+        </item>
+        <item
+            android:id="@+id/Rate_us"
+            android:icon="@drawable/ic_rate"
+            android:title="Rate Us">
+
+        </item>
+
+    </group>
+    <item android:title="Feedback">
+        <menu>
+            <item
+                android:id="@+id/feedback"
+                android:icon="@drawable/ic_feedback"
+                android:title="Feedback">
+
+            </item>
+            <item
+                android:id="@+id/Report_prob"
+                android:icon="@drawable/ic_report"
+                android:title="Report a Problem">
+
+            </item>
+        </menu>
+    </item>
+
+
+</menu>

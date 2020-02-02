@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Appointments">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool_Bar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginBottom="45dp"
+        android:background="#FF5622"
+        android:elevation="4dp"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:titleTextColor="#F44336"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <AutoCompleteTextView
+        android:id="@+id/input_car_model"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Car Model?"
+        app:layout_constraintBottom_toTopOf="@+id/Car_Plate_Field"
+        app:layout_constraintEnd_toEndOf="@+id/Car_Plate_Field"
+        app:layout_constraintStart_toStartOf="@+id/Car_Plate_Field"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <EditText
+        android:id="@+id/Car_Plate_Field"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="Plate Number"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/choose_date"
+        app:layout_constraintEnd_toEndOf="@+id/choose_date"
+        app:layout_constraintStart_toStartOf="@+id/choose_date"
+        app:layout_constraintTop_toBottomOf="@+id/input_car_model" />
+
+    <EditText
+        android:id="@+id/choose_date"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Date"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/choose_time"
+        app:layout_constraintEnd_toEndOf="@+id/choose_time"
+        app:layout_constraintStart_toStartOf="@+id/choose_time"
+        app:layout_constraintTop_toBottomOf="@+id/Car_Plate_Field" />
+
+    <EditText
+        android:id="@+id/choose_time"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="Time"
+        android:inputType="time"
+        app:layout_constraintBottom_toTopOf="@+id/Select_One"
+        app:layout_constraintEnd_toEndOf="@+id/bookButton"
+        app:layout_constraintStart_toStartOf="@+id/Linear_Layout"
+        app:layout_constraintTop_toBottomOf="@+id/choose_date" />
+
+    <TextView
+        android:id="@+id/Select_One"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="10dp"
+        android:text="Select Location (Select Only One)"
+        android:textColor="#2279DD"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/ServicesCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_time" />
+
+    <RadioButton
+        android:id="@+id/ServicesCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="14dp"
+        android:layout_weight="1"
+        android:text="Service Center"
+        android:textColor="#DF2121"
+        app:layout_constraintBottom_toTopOf="@+id/Linear_Layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/HomeService"
+        app:layout_constraintTop_toBottomOf="@+id/Select_One" />
+
+    <RadioButton
+        android:id="@+id/HomeService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="29dp"
+        android:layout_weight="1"
+        android:text="Home Services"
+        android:textColor="#DF2121"
+        app:layout_constraintEnd_toStartOf="@+id/ServicesCenter"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Select_One" />
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/input_car_model"
+        app:layout_constraintEnd_toEndOf="@+id/input_car_model"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tool_Bar" />
+
+    <LinearLayout
+        android:id="@+id/Linear_Layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/bookButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ServicesCenter">
+
+        <EditText
+            android:id="@+id/Address_Field"
+            android:layout_width="387dp"
+            android:layout_height="51dp"
+            android:ems="10"
+            android:hint="Enter Address with Zip Code"
+            android:inputType="textPersonName"
+            android:visibility="gone"
+            tools:layout_editor_absoluteX="12dp"
+            tools:layout_editor_absoluteY="493dp" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginEnd="22dp"
+        android:background="@drawable/logout_btn_style"
+        android:text="Reset"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bookButton"
+        app:layout_constraintEnd_toStartOf="@+id/bookButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bookButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginBottom="108dp"
+        android:background="@drawable/logout_btn_style"
+        android:text="Book Now"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/resetButton"
+        app:layout_constraintTop_toBottomOf="@+id/Linear_Layout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
